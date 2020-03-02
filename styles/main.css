@@ -1,0 +1,99 @@
+/* Global */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  scroll-behavior: smooth;
+  background-image: url(/images/fondo.png);
+  color: black;
+}
+
+li {
+  font-size: 0.8rem;
+  margin-bottom:4px;
+}
+
+p {
+  line-height: 1.5rem;
+  font-size: 0.9rem;
+}
+
+/* Header */
+
+header {
+  margin-top: 2rem;
+}
+h1 {
+  text-align: center;
+  color: white;
+  font: 1.5rem bold;
+}
+
+.menos {
+  display: none;
+}
+
+/* Acordeón */
+
+.acordeon-wrapper {
+  width: 90%;
+  max-width: 900px;
+  margin: 2rem auto;
+}
+
+.acordeon-item {
+  background-color: rgb(255, 255, 255);
+  color: #111;
+  margin: 1rem 0;
+  border-radius: 0.7rem;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.349);
+}
+
+.acordeon-title {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  min-height: 3rem;
+}
+
+.acordeon-body {
+  max-height: 0;
+  overflow: hidden;
+  display: flex;
+  border-top: 1px solid;
+  border-image: linear-gradient(to left, transparent, #225c95, transparent) 1;
+  transition: all 0.5s ease-out;
+}
+
+.content-info {
+  padding: 1rem 1rem 1rem 1rem;
+  text-align: justify;
+}
+.album-tracklist {
+  padding: 1rem 1rem 1rem 0.5rem;
+}
+.album-tracklist figure img {
+  max-width:150px;
+  max-height: 150px;
+}
+.canciones{
+  margin: 5px 0px;
+  font-style: italic;
+  font-size:0.9rem;
+  font-weight: bolder;
+}
+.active {
+  display: block;
+}
+
+.inactive {
+  display: none;
+}
