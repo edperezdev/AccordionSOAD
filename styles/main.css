@@ -9,29 +9,49 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   scroll-behavior: smooth;
-  background-image: url(/images/fondo.png);
+  background-image: url(./../images/fondo.png);
   color: black;
 }
 
 li {
   font-size: 0.8rem;
-  margin-bottom:4px;
+  margin-bottom: 4px;
 }
 
 p {
   line-height: 1.5rem;
   font-size: 0.9rem;
+  margin-top: 0px;
+  margin-bottom: 10px;
 }
 
 /* Header */
 
 header {
-  margin-top: 2rem;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: space-evenly;
+  width: 90%;
+  align-items: center;
 }
+
+.logo img {
+  max-width: 200px;
+  max-height: 200px;
+}
+.webtitle-wrapper {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.424);
+  max-width: 400px;
+  border-radius: 20px;
+}
+
 h1 {
-  text-align: center;
   color: white;
-  font: 1.5rem bold;
+  font: 1.26rem bold;
+  text-align: center;
+  font-style: oblique;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .menos {
@@ -42,16 +62,22 @@ h1 {
 
 .acordeon-wrapper {
   width: 90%;
-  max-width: 900px;
+  max-width: 920px;
   margin: 2rem auto;
 }
 
 .acordeon-item {
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.842);
   color: #111;
   margin: 1rem 0;
   border-radius: 0.7rem;
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.349);
+  transition: all ease-in 0.3s;
+}
+
+.acordeon-item:hover {
+  transform: scale(1.05);
+  background-color: white;
 }
 
 .acordeon-title {
@@ -62,6 +88,19 @@ h1 {
   justify-content: space-between;
   font-weight: bold;
   min-height: 3rem;
+  position: relative;
+}
+
+.acordeon-title::after {
+  position: absolute;
+  content: "+";
+  right: 15px;
+}
+
+.acordeon-title.active::after {
+  content: "-";
+  position: absolute;
+  right: 15px;
 }
 
 .acordeon-body {
@@ -70,30 +109,37 @@ h1 {
   display: flex;
   border-top: 1px solid;
   border-image: linear-gradient(to left, transparent, #225c95, transparent) 1;
-  transition: all 0.5s ease-out;
+  transition: all ease-in-out 1s;
 }
 
 .content-info {
-  padding: 1rem 1rem 1rem 1rem;
+  padding: 1rem 2rem 1rem 1rem;
   text-align: justify;
 }
 .album-tracklist {
   padding: 1rem 1rem 1rem 0.5rem;
 }
 .album-tracklist figure img {
-  max-width:150px;
-  max-height: 150px;
+  max-width: 180px;
+  max-height: 180px;
 }
-.canciones{
+.canciones {
   margin: 5px 0px;
   font-style: italic;
-  font-size:0.9rem;
+  font-size: 0.9rem;
   font-weight: bolder;
 }
-.active {
-  display: block;
-}
 
-.inactive {
-  display: none;
+/* Footer */
+
+footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(189, 100, 100, 0.658);
+  color: white;
+  font: bolder 0.9rem monospace;
+  text-align: center;
+  line-height: 1.5rem;
+  height: 1.5rem;
 }
